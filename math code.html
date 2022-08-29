@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mathematical Models</title>
+<font face="Georgia">
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: purple;
+  color: white;
+}
+body{
+margin: 30px;
+}
+body {
+background-image:url('v7.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="Newdis.html">Home</a>
+  <a href="login.html" target="_blank">Log in/Register</a>
+<a href="math code.html" target="_blank">Mathematical Models</a>
+  <a href="Feedback.html" target="_blank"> Feedback</a>
+</div>
+
+<div style="padding-left:16px">
+</div>
+<h1><center>MATHEMATICAL MODEL FORMULATION</center></h1>
+<h2>Logistic Regression</h2>
+<h4>Derivation of logistic regression:</h4>
+<p>The fundamental equation of generalized linear model is:<br><br>
+<b>g(E(y)) = &#593 + &#946 X<sub>1</sub> + &#611 X<sub>2</sub></b><br><br>
+Here, g() is the link function, E(y) is the expectation of target variable and  &#593 + &#946 X<sub>1</sub> + &#611 X<sub>2</sub> is the linear predictor.</p>
+<p>The simple linear regression equation with dependent variable enclosed in a link function:<br><br>
+<b>g(y) = &#946<sub>o</sub> + &#946(h)</b>---Eq(1)<br><br>
+Here, h is considered as the independent variable.</p>
+<p>For any value of slope and dependent variable, exponent of this equation will never be negative.<br><br>
+<b>p = e<sup>(&#946<sub>o</sub> + &#946(h))</sup></b>---Eq(2)
+</p>
+<p>To make the probability less than 1, p must be divide by a number greater than p. This can simply be done by:<br><br>
+<b>p = e<sup>(&#946<sub>o</sub> + &#946(h))</sup> &#8725 e<sup>(&#946<sub>o</sub> + &#946(h))</sup> + 1</b>---Eq(3)
+</p>
+<p>Using Eq(1), (2) and (3), the probablity can be redefined as:<br><br>
+<b>p = e<sup>y</sup> &#8725 1 + e<sup>y</sup></b>---Eq(4)<br><br>
+where p is the probability of success. This Eq(4) is the Logit Function.</p>
+<p>If p is the probability of success, 1-p will be the probability of failure which can be written as:<br><br>
+<b>q = 1 - p = 1 - (e<sup>y</sup> &#8725 1 + e<sup>y</sup>)</b>---Eq(5)<br><br>
+where q is the probability of failure.</p>
+<p>On dividing Eq(4) &#8725 Eq(5) the result is,<br><br>
+<b>p &#8725 1 - p = e<sup>y</sup></b></p>
+<p>After taking log on both sides,<br><br>
+<b>log(p &#8725 1 - p) = y</b><br><br>
+log(p &#8725 1 - p) is the link function. Logarithmic transformation on the outcome variable allows to model a non-linear association in a linear way.</p>
+<p>After substituting value of y,<br><br>
+<b>log(p &#8725 1 - p) = &#946<sub>o</sub> + &#946(h)</b><br><br>
+This is the equation used in Logistic Regression. Here, (p &#8725 1 - p) is the odd ratio. Whenever the log of odd ratio is found to be positive, the probability of success is always more than 50%. A typical logistic <br><br>model plot never goes below 0 and above 1.</p>
+<p>A typical representation of Logistic Regression graph is as below,<br><br>
+<img src="m.png" alt="Logistic Regression">
+</p>
+</body>
+</html>
